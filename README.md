@@ -1,4 +1,4 @@
-# Inven BS
+# Untitled app
 
 Aplikasi inventaris barang sekolah menggunakan Framework Laravel 11. Aplikasi ini cocok untuk digunakan untuk di sekolah.
 
