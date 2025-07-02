@@ -1,6 +1,6 @@
 # Inven BS
 
-Aplikasi inventaris barang sekolah menggunakan Framework Laravel 10. Aplikasi ini cocok untuk digunakan untuk di sekolah.
+Aplikasi inventaris barang sekolah menggunakan Framework Laravel 11. Aplikasi ini cocok untuk digunakan untuk di sekolah.
 
 Beberapa CRUD menggunakan modal dan AJAX untuk pengambilan data agar mengurangi penggunaan pindah halaman.
 
