@@ -112,3 +112,5 @@ Password    : secret
 ### Dibuat dengan
 
 -   [Laravel](https://laravel.com) - Web Framework
+
+  Credit: https://github.com/mrizkimaulidan/inven-bs
