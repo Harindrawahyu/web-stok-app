@@ -21,7 +21,6 @@ class VerificationController extends Controller
             $commodity = Commodity::findOrFail($decryptedId);
 
             return view('verifications.show', ['commodity' => $commodity]);
-
         } catch (DecryptException $e) {
             return view('verifications.invalid');
         }
