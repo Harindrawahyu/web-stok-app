@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 
@@ -25,7 +26,7 @@ class UserController extends Controller
             return $q->whereRelation('roles', 'id', '=', request('role_id'));
         });
 
-        $users = $query->get()->except(auth()->id());
+        $users = $query->get()->except(Auth::id());
         $roles = Role::withCount('users')->get();
 
         return view('users.index', compact('users', 'roles'));

@@ -1,16 +1,17 @@
 <?php
 
-use App\Http\Controllers\CommodityAcquisitionController;
-use App\Http\Controllers\CommodityController;
-use App\Http\Controllers\CommodityLocationController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CommodityController;
 use App\Http\Controllers\VerificationController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommodityLocationController;
+use App\Http\Controllers\CommodityAcquisitionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', function () {
+    return view('auth/login');
 })->middleware('guest');
 
+Route::get('/register', function () {
+    return view('auth/register');
+})->middleware('guest');
+
+// Registration routes
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register')->middleware('guest');
+Route::post('/register', [RegisterController::class, 'register'])->middleware('guest');
+
+// Login and Logout routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login'])->middleware('guest');
 Route::post('/logout', LogoutController::class)->name('logout')->middleware('auth');

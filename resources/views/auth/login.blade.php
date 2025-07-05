@@ -21,8 +21,8 @@
             <div class="d-flex flex-wrap align-items-stretch">
                 <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
                     <div class="p-4 m-3">
-                        <h5 class="text-dark font-weight-normal pt-5 mt-5">Aplikasi <span
-                                class="font-weight-bold">Inventori Stok Barang
+                        <h5 class="text-dark font-weight-normal pt-5 mt-5 mb-5">Selamat Datang di Aplikasi <span
+                                class="font-weight-bold">Inventori Stok Barang Minimarket
                             </span></h5>
                         @include('utilities.alert')
                         <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
@@ -60,31 +60,42 @@
                             </div>
 
                             <div class="form-group text-right">
-                                <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right"
+                                <button type="submit" class="btn btn-success btn-lg btn-icon icon-right"
                                     tabindex="4">
                                     Login
                                 </button>
+                                <div class="text-center mt-3">
+                                    <p>Belum punya akun? Silahkan
+                                        <a href="{{ route('register') }}"
+                                            class="text-success font-weight-bold">Daftar</a>
+                                    </p>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
-                    data-background="../assets/img/unsplash/login-bg.jpg">
+                    data-background="../assets/img/unsplash/raja-ampat.jpg">
                     <div class="absolute-bottom-left index-2">
                         <div class="text-light p-5 pb-2">
                             <div class="mb-5 pb-3">
                                 <h1 class="mb-2 display-4 font-weight-bold" id="greetings"></h1>
-                                <h5 class="font-weight-normal text-muted-transparent">Bali, Indonesia</h5>
+                                <h5 class="font-weight-normal text-muted-transparent">Raja Ampat, Indonesia</h5>
                             </div>
-                            Photo by <a class="text-light bb" target="_blank"
+                        </div>
+                        Photo by <a class="text-light bb" target="_blank" Photo by <a
+                            href="https://unsplash.com/photos/an-aerial-view-of-a-lagoon-with-many-small-islands-Szabb9A5U4o">Simon
+                            Spring</a> on <a class="text-light bb" target="_blank"
+                            href="https://unsplash.com">Unsplash</a>
+                        {{-- Photo by <a class="text-light bb" target="_blank"
                                 href="https://unsplash.com/photos/a8lTjWJJgLA">Justin
                                 Kauffman</a> on <a class="text-light bb" target="_blank"
-                                href="https://unsplash.com">Unsplash</a>
-                        </div>
+                                href="https://unsplash.com">Unsplash</a> --}}
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
 
     <!-- General JS Scripts -->
